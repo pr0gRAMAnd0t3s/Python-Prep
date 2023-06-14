@@ -28,8 +28,10 @@ class Herramientas:
             return lista_conversion
         
     def factorial(self):
+        lista_factorial = []
         for i in self.lista:
-            print('El factorial de ', i, 'es', self.__factorial(i))
+            lista_factorial.append(self._factorial(i))
+            return lista_factorial
 
     def __verifica_primo(self, numero):
         es_primo = True
