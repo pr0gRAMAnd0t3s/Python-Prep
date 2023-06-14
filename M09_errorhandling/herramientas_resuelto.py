@@ -1,10 +1,6 @@
 class Herramientas:
     def __init__(self, lista_numeros):
-        if type(lista_numeros) != list:
-            self.lista = []
-            raise ValueError('Se ha creado una lista vacia, Se esperaba otra cosa amig@')
-        else:
-            self.lista = lista_numeros
+        self.lista = lista_numeros
 
     def verifica_primo(self):
         for i in self.lista:
@@ -14,19 +10,9 @@ class Herramientas:
                 print('El elemento', i, 'NO es un numero primo')
 
     def conversion_grados(self, origen, destino):
-        parametros_esperados = ['celsius', 'farenheit', 'kelvin']
-        lista_conversion = []
-        if str(origen) not in parametros_esperados:
-            print('Los parametros de origen esperados son: {parametros_esperados}')
-            return lista_conversion
-        if str(destino) not in parametros_esperados:
-            print('Los parametros de destino esperados son: {parametros_esperados}')
-            return lista_conversion
-            
         for i in self.lista:
-            lista_conversion.append(self.__conversion_grados(i, origen, destino))
-            return lista_conversion
-        
+            print(i, 'grados', origen, 'son', self.__conversion_grados(i, origen, destino),'grados',destino)
+    
     def factorial(self):
         for i in self.lista:
             print('El factorial de ', i, 'es', self.__factorial(i))
